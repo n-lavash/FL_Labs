@@ -1,0 +1,29 @@
+ALL LEXEMES LIST:
+lexeme = 'do', lexemeType = do, position = 2
+lexeme = 'b', lexemeType = identifier, position = 4
+lexeme = '=', lexemeType = assign, position = 6
+lexeme = 'b', lexemeType = identifier, position = 8
+lexeme = '\', lexemeType = arithmetic operation over, position = 10
+lexeme = '2', lexemeType = constant, position = 12
+lexeme = '+', lexemeType = arithmetic operation lower, position = 14
+lexeme = '23', lexemeType = constant, position = 17
+lexeme = '*', lexemeType = arithmetic operation over, position = 19
+lexeme = 'с', lexemeType = identifier, position = 21
+lexeme = '*', lexemeType = arithmetic operation over, position = 23
+lexeme = 'с', lexemeType = identifier, position = 25
+lexeme = '-', lexemeType = arithmetic operation lower, position = 27
+lexeme = '143', lexemeType = constant, position = 31
+lexeme = 'loop', lexemeType = loop, position = 36
+lexeme = 'until', lexemeType = until, position = 42
+lexeme = 'b', lexemeType = identifier, position = 44
+lexeme = '<>', lexemeType = logic operation, position = 47
+
+ALL IDENTIFIERS LIST:
+lexeme = 'b', lexemeType = identifier, position = 4
+lexeme = 'b', lexemeType = identifier, position = 8
+lexeme = 'b', lexemeType = identifier, position = 44
+
+ALL CONSTANTS LIST:
+lexeme = '2', lexemeType = constant, position = 12
+lexeme = '23', lexemeType = constant, position = 17
+lexeme = '143', lexemeType = constant, position = 31

@@ -2,10 +2,12 @@ package task1.files;
 
 import task1.enums.EnLexemeType;
 import task1.lexemes.Lexeme;
+import task3.PolizEntry;
 
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class WriteFiles {
@@ -62,6 +64,31 @@ public class WriteFiles {
                     toWrite) {
                 writer.write(write + "\n");
             }
+        }
+        catch(IOException ex){
+
+            System.out.println(ex.getMessage());
+        }
+    }
+
+    public static void writeFile1(String path, HashMap<String, Double> toWrite) {
+        try(FileWriter writer = new FileWriter(path, false))
+        {
+            for (String ind:
+                    toWrite.keySet()) {
+                writer.write(ind + " = " + toWrite.get(ind) + "\n");
+            }
+        }
+        catch(IOException ex){
+
+            System.out.println(ex.getMessage());
+        }
+    }
+
+    public static void writeFile2(String path, List<PolizEntry> allPolizEntries) {
+        try(FileWriter writer = new FileWriter(path, false))
+        {
+            writer.write(allPolizEntries.toString());
         }
         catch(IOException ex){
 

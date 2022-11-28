@@ -153,7 +153,7 @@ public class Main {
             index++;
         }
 
-        if (currentState == EnState.F)
+        if (currentState == EnState.E)
             WriteFiles.writeFile("C:/Users/levas/Desktop/Мои усы лапы и хвост/Учеба/Автоматы/Task1/src/results.txt", "There is a mistake in the structure");
         else
             WriteFiles.writeFile("C:/Users/levas/Desktop/Мои усы лапы и хвост/Учеба/Автоматы/Task1/src/results.txt", results);

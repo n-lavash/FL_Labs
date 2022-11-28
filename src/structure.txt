@@ -1,1 +1,1 @@
-do b = b \ 2 + 23 * с * с - 143 loop until b <> a
+do b = b \ c a = c * 15 + 2 - 3 loop until b < 3

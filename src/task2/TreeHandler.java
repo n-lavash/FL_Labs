@@ -489,7 +489,7 @@ public class TreeHandler {
             result.add(index1);
             return result;
         }
-        while(currLex.getLexemeType().equals(EnLexemeType.lAo1)) {
+        while(currLex.getLexemeType().equals(EnLexemeType.lAo2)) {
             exprList.add(currLex);
             arithExpr1 = arithExpr1(index1 + 1, level + 1);
             if (arithExpr1.get(0) == 0) {
@@ -545,7 +545,7 @@ public class TreeHandler {
             result.add(index1);
             return result;
         }
-        while(currLex.getLexemeType().equals(EnLexemeType.lAo2)) {
+        while(currLex.getLexemeType().equals(EnLexemeType.lAo1)) {
             exprList.add(currLex);
             operand = operand(index1 + 1, level + 1);
             if (operand.get(0) == 0) {

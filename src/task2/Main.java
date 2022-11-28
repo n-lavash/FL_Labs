@@ -4,6 +4,7 @@ import task1.enums.EnState;
 import task1.files.ReadFile;
 import task1.files.WriteFiles;
 import task1.lexemes.Lexeme;
+import task3.TreeHandler;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -11,12 +12,11 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class Main {
-
     public static List<Expression> alreadyWrittenExpressions = new ArrayList<>();
 
     public static void main(String[] args) {
         List<Lexeme> results = new ArrayList<>();
-        File file = new File("C:/Users/levas/Desktop/Мои усы лапы и хвост/Учеба/Автоматы/Task1/src/structure.txt");
+        File file = new File("C:/Users/levas/Desktop/Мои усы лапы и хвост/Учеба/Автоматы/FL_Labs/src/structure.txt");
         List<String> structureFromFile = ReadFile.readFile(file);
         String structureJoined = String.join(" ", structureFromFile);
         EnState currentState = EnState.S;
@@ -149,25 +149,37 @@ public class Main {
             if (currentSymbol != ' ')
                 currentLexeme += currentSymbol;
 
+            try {
+                if (!currentLexeme.equals("do") && !currentLexeme.equals("loop") && !currentLexeme.equals("while")) {
+                    char nextSymbol = structureJoined.charAt(index+1);
+                    if (nextSymbol == ' ')
+                        add = true;
+                }
+            } catch (IndexOutOfBoundsException e) {
+                add = true;
+            }
+
+
             if (add) {
                 if (!currentLexeme.equals("") && !currentLexeme.equals(" "))
                     results.add(new Lexeme(currentLexeme, index));
                 currentLexeme = "";
             }
+
             index++;
         }
 
         if (currentState == EnState.F)
-            WriteFiles.writeFile("C:/Users/levas/Desktop/Мои усы лапы и хвост/Учеба/Автоматы/Task1/src/results.txt", "There is a mistake in the structure");
+            WriteFiles.writeFile("C:/Users/levas/Desktop/Мои усы лапы и хвост/Учеба/Автоматы/FL_Labs/src/results.txt", "There is a mistake in the structure");
         else {
-            WriteFiles.writeFile("C:/Users/levas/Desktop/Мои усы лапы и хвост/Учеба/Автоматы/Task1/src/results.txt", results);
-            TreeHandler treeHandler = new TreeHandler(results);
+            WriteFiles.writeFile("C:/Users/levas/Desktop/Мои усы лапы и хвост/Учеба/Автоматы/FL_Labs/src/results.txt", results);
+            task3.TreeHandler treeHandler = new TreeHandler(results);
             boolean result = treeHandler.workTheTree();
             if (result) {
                 List<Expression> expressionsList = treeHandler.getExpressionList().stream().
                         sorted((o1, o2) -> compare(o1.getLevel(), o2.getLevel())).
                         collect(Collectors.toList());
-                List<String> toWrite = new ArrayList<String>();
+                List<String> toWrite = new ArrayList<>();
                 int i = 0;
                 System.out.println(expressionsList);
                 while (i < expressionsList.size()) {
@@ -191,22 +203,22 @@ public class Main {
                     }
                     i++;
                 }
-                WriteFiles.writeFile1("C:/Users/levas/Desktop/Мои усы лапы и хвост/Учеба/Автоматы/Task1/src/tree.txt", toWrite);
+                WriteFiles.writeFile1("C:/Users/levas/Desktop/Мои усы лапы и хвост/Учеба/Автоматы/FL_Labs/src/tree.txt", toWrite);
             }
         }
     }
 
-        public static boolean print(Expression expr) {
-            if(!alreadyWrittenExpressions.contains(expr)) {
-                alreadyWrittenExpressions.add(expr);
-            }
-            return false;
+    public static boolean print(Expression expr) {
+        if (!alreadyWrittenExpressions.contains(expr)) {
+            alreadyWrittenExpressions.add(expr);
         }
+        return false;
+    }
 
-        public static int compare(int a1, int a2) {
-            if (a1 > a2)
-                return 1;
-            else
-                return -1;
-        }
+    public static int compare(int a1, int a2) {
+        if (a1 > a2)
+            return 1;
+        else
+            return -1;
+    }
 }

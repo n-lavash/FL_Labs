@@ -17,7 +17,7 @@ public class Main {
 
     public static void main(String[] args) {
         List<Lexeme> results = new ArrayList<>();
-        File file = new File("C:/Users/levas/Desktop/Мои усы лапы и хвост/Учеба/Автоматы/Task1/src/structure.txt");
+        File file = new File("C:/Users/levas/Desktop/Мои усы лапы и хвост/Учеба/Автоматы/FL_Labs/src/structure.txt");
         List<String> structureFromFile = ReadFile.readFile(file);
         String structureJoined = String.join(" ", structureFromFile);
         EnState currentState = EnState.S;
@@ -151,7 +151,7 @@ public class Main {
                 currentLexeme += currentSymbol;
 
             try {
-                if (!currentLexeme.equals("do") && !currentLexeme.equals("loop") && !currentLexeme.equals("until")) {
+                if (!currentLexeme.equals("do") && !currentLexeme.equals("loop") && !currentLexeme.equals("while")) {
                     char nextSymbol = structureJoined.charAt(index+1);
                     if (nextSymbol == ' ')
                         add = true;
@@ -171,9 +171,9 @@ public class Main {
         }
 
         if (currentState == EnState.E)
-            WriteFiles.writeFile("C:/Users/levas/Desktop/Мои усы лапы и хвост/Учеба/Автоматы/Task1/src/results.txt", "There is a mistake in the structure");
+            WriteFiles.writeFile("C:/Users/levas/Desktop/Мои усы лапы и хвост/Учеба/Автоматы/FL_Labs/src/results.txt", "There is a mistake in the structure");
         else {
-            WriteFiles.writeFile("C:/Users/levas/Desktop/Мои усы лапы и хвост/Учеба/Автоматы/Task1/src/results.txt", results);
+            WriteFiles.writeFile("C:/Users/levas/Desktop/Мои усы лапы и хвост/Учеба/Автоматы/FL_Labs/src/results.txt", results);
             TreeHandler treeHandler = new TreeHandler(results);
             boolean result = treeHandler.workTheTree();
             if (result) {
@@ -204,7 +204,7 @@ public class Main {
                     }
                     i++;
                 }
-                WriteFiles.writeFile1("C:/Users/levas/Desktop/Мои усы лапы и хвост/Учеба/Автоматы/Task1/src/tree.txt", toWrite);
+                WriteFiles.writeFile1("C:/Users/levas/Desktop/Мои усы лапы и хвост/Учеба/Автоматы/FL_Labs/src/tree.txt", toWrite);
             }
         }
     }

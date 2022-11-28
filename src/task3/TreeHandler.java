@@ -114,12 +114,12 @@ public class TreeHandler {
             currLex = this.lexemeList.get(index);
         } catch (IndexOutOfBoundsException e) {
             if (!this.errorTriggered) {
-                Error("Ожидается until", prevLex.getPosition() + prevLex.getLexeme().length() + 1);
+                Error("Ожидается while", prevLex.getPosition() + prevLex.getLexeme().length() + 1);
             }
             return false;
         }
-        if(!currLex.getLexemeType().equals(EnLexemeType.lUntil) && !this.errorTriggered) {
-            Error("Ожидается until", currLex.getPosition());
+        if(!currLex.getLexemeType().equals(EnLexemeType.lWhile) && !this.errorTriggered) {
+            Error("Ожидается while", currLex.getPosition());
             return false;
         }
         exprList.add(currLex);
@@ -631,7 +631,7 @@ public class TreeHandler {
     }
 
     public void Error(String message, int position) {
-        WriteFiles.writeFile("C:/Users/levas/Desktop/Мои усы лапы и хвост/Учеба/Автоматы/Task1/src/tree.txt", message + " в позиции " + position);
+        WriteFiles.writeFile("C:/Users/levas/Desktop/Мои усы лапы и хвост/Учеба/Автоматы/FL_Labs/src/tree.txt", message + " в позиции " + position);
         this.errorTriggered = true;
     }
 

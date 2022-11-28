@@ -1,1 +1,1 @@
-[b, b, c, DIV, SET]
+[b, b, c, DIV, SET, b, 3, CMPL, b, 6, CMPG, AND, b, 6, CMPG, AND, c, 10, CMPL, 21, JZ]

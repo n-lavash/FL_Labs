@@ -5,31 +5,35 @@ lexeme = '=', lexemeType = assign, position = 5
 lexeme = 'b', lexemeType = identifier, position = 7
 lexeme = '\', lexemeType = arithmetic operation over, position = 9
 lexeme = 'c', lexemeType = identifier, position = 11
-lexeme = 'a', lexemeType = identifier, position = 13
-lexeme = '=', lexemeType = assign, position = 15
-lexeme = 'c', lexemeType = identifier, position = 17
-lexeme = '*', lexemeType = arithmetic operation over, position = 19
-lexeme = '15', lexemeType = constant, position = 22
-lexeme = '+', lexemeType = arithmetic operation lower, position = 24
-lexeme = '2', lexemeType = constant, position = 26
-lexeme = '-', lexemeType = arithmetic operation lower, position = 28
-lexeme = '3', lexemeType = constant, position = 30
-lexeme = 'loop', lexemeType = loop, position = 36
-lexeme = 'until', lexemeType = until, position = 42
-lexeme = 'b', lexemeType = identifier, position = 43
-lexeme = '<', lexemeType = logic operation, position = 45
-lexeme = '3', lexemeType = constant, position = 47
+lexeme = 'loop', lexemeType = loop, position = 17
+lexeme = 'while', lexemeType = until, position = 23
+lexeme = 'b', lexemeType = identifier, position = 24
+lexeme = '<', lexemeType = logic operation, position = 26
+lexeme = '3', lexemeType = constant, position = 28
+lexeme = 'and', lexemeType = and, position = 32
+lexeme = 'b', lexemeType = identifier, position = 34
+lexeme = '>', lexemeType = logic operation, position = 36
+lexeme = '6', lexemeType = constant, position = 38
+lexeme = 'and', lexemeType = and, position = 42
+lexeme = 'b', lexemeType = identifier, position = 44
+lexeme = '>', lexemeType = logic operation, position = 46
+lexeme = '6', lexemeType = constant, position = 48
+lexeme = 'and', lexemeType = and, position = 52
+lexeme = 'c', lexemeType = identifier, position = 54
+lexeme = '<', lexemeType = logic operation, position = 56
+lexeme = '10', lexemeType = constant, position = 59
 
 ALL IDENTIFIERS LIST:
 lexeme = 'b', lexemeType = identifier, position = 3
 lexeme = 'b', lexemeType = identifier, position = 7
 lexeme = 'c', lexemeType = identifier, position = 11
-lexeme = 'a', lexemeType = identifier, position = 13
-lexeme = 'c', lexemeType = identifier, position = 17
-lexeme = 'b', lexemeType = identifier, position = 43
+lexeme = 'b', lexemeType = identifier, position = 24
+lexeme = 'b', lexemeType = identifier, position = 34
+lexeme = 'b', lexemeType = identifier, position = 44
+lexeme = 'c', lexemeType = identifier, position = 54
 
 ALL CONSTANTS LIST:
-lexeme = '15', lexemeType = constant, position = 22
-lexeme = '2', lexemeType = constant, position = 26
-lexeme = '3', lexemeType = constant, position = 30
-lexeme = '3', lexemeType = constant, position = 47
+lexeme = '3', lexemeType = constant, position = 28
+lexeme = '6', lexemeType = constant, position = 38
+lexeme = '6', lexemeType = constant, position = 48
+lexeme = '10', lexemeType = constant, position = 59

@@ -105,12 +105,12 @@ public class TreeHandler {
             currLex = this.lexemeList.get(index);
         } catch (IndexOutOfBoundsException e) {
             if (!this.errorTriggered) {
-                Error("Ожидается until", prevLex.getPosition() + prevLex.getLexeme().length() + 1);
+                Error("Ожидается while", prevLex.getPosition() + prevLex.getLexeme().length() + 1);
             }
             return false;
         }
-        if(!currLex.getLexemeType().equals(EnLexemeType.lUntil) && !this.errorTriggered) {
-            Error("Ожидается until", currLex.getPosition());
+        if(!currLex.getLexemeType().equals(EnLexemeType.lWhile) && !this.errorTriggered) {
+            Error("Ожидается while", currLex.getPosition());
             return false;
         }
 

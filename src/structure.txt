@@ -1,1 +1,1 @@
-do b = b \ c loop while b < 3 and b > 6 and b > 6 and c < 10
+do b = b * c * 2 loop until b > 12

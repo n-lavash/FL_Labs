@@ -151,7 +151,7 @@ public class Main {
                 currentLexeme += currentSymbol;
 
             try {
-                if (!currentLexeme.equals("do") && !currentLexeme.equals("loop") && !currentLexeme.equals("while")) {
+                if (!currentLexeme.equals("do") && !currentLexeme.equals("loop") && !currentLexeme.equals("until")) {
                     char nextSymbol = structureJoined.charAt(index+1);
                     if (nextSymbol == ' ')
                         add = true;
@@ -182,7 +182,6 @@ public class Main {
                         collect(Collectors.toList());
                 List<String> toWrite = new ArrayList<>();
                 int i = 0;
-                System.out.println(expressionsList);
                 while (i < expressionsList.size()) {
                     Expression expr = expressionsList.get(i);
                     if (expr != null) {

@@ -3,7 +3,7 @@ package task1.enums;
 public enum EnLexemeType {
     lDo ("do"),
     lLoop ("loop"),
-    lWhile("while"),
+    lUntil("until"),
     lAnd ("and"),
     lOr ("or"),
     lAo1 ("arithmetic operation over"),

@@ -84,6 +84,7 @@ public class TreeHandler {
         }
 
         allExpressions.add(this.expressionList.get(this.expressionList.size() - 1));
+
         index = statements.get(1);
 
         try {
@@ -105,15 +106,14 @@ public class TreeHandler {
             currLex = this.lexemeList.get(index);
         } catch (IndexOutOfBoundsException e) {
             if (!this.errorTriggered) {
-                Error("Ожидается while", prevLex.getPosition() + prevLex.getLexeme().length() + 1);
+                Error("Ожидается until", prevLex.getPosition() + prevLex.getLexeme().length() + 1);
             }
             return false;
         }
-        if(!currLex.getLexemeType().equals(EnLexemeType.lWhile) && !this.errorTriggered) {
-            Error("Ожидается while", currLex.getPosition());
+        if(!currLex.getLexemeType().equals(EnLexemeType.lUntil) && !this.errorTriggered) {
+            Error("Ожидается until", currLex.getPosition());
             return false;
         }
-
         exprList.add(currLex);
         index++;
 
@@ -126,13 +126,16 @@ public class TreeHandler {
             }
             return false;
         }
+
         List<Integer> logicalExpr = logicalExpr(index, level + 1);
         if (logicalExpr.get(0) == 0 && !this.errorTriggered) {
             Error("Ожидается логическое выражение", currLex.getPosition());
             return false;
         }
-        index = logicalExpr.get(1);
+
+        exprList.add(currLex);
         allExpressions.add(this.expressionList.get(this.expressionList.size() - 1));
+        this.expressionList.add(new Expression(exprList, level, allExpressions));
         return true;
     }
 
@@ -296,13 +299,21 @@ public class TreeHandler {
                 return result;
             }
             allExpressions.add(this.expressionList.get(this.expressionList.size() - 1));
+
             index1 = operand.get(1);
-            try {
-                currLex = this.lexemeList.get(index1);
-            } catch (IndexOutOfBoundsException e) {
-                result.add(0);
-                result.add(index1);
-                return result;
+
+            int s = this.lexemeList.size();
+
+            if (index1 < this.lexemeList.size()) {
+                try {
+                    currLex = this.lexemeList.get(index1);
+                } catch (IndexOutOfBoundsException e) {
+                    result.add(0);
+                    result.add(index1);
+                    return result;
+                }
+            } else {
+                index1 = this.lexemeList.size() - 1;
             }
         }
 
@@ -339,6 +350,7 @@ public class TreeHandler {
         }
 
         exprList.add(currLex);
+
         this.expressionList.add(new Expression(lexemeList, level, null));
         result.add(1);
         result.add(index1 + 1);
@@ -377,6 +389,7 @@ public class TreeHandler {
             return result;
         }
 
+
         this.expressionList.add(new Expression(exprList, level, allExpressions));
         result.add(1);
         result.add(index1);
@@ -403,6 +416,7 @@ public class TreeHandler {
 
         if(currLex.getLexemeType().equals(EnLexemeType.lVar)) {
             exprList.add(currLex);
+
             index1++;
 
             try {
@@ -444,6 +458,7 @@ public class TreeHandler {
                 return result;
             }
             allExpressions.add(this.expressionList.get(this.expressionList.size() - 1));
+
             this.expressionList.add(new Expression(exprList, level, allExpressions));
             index1 = arithExpr.get(1);
             result.add(1);
@@ -491,6 +506,7 @@ public class TreeHandler {
         }
         while(currLex.getLexemeType().equals(EnLexemeType.lAo2)) {
             exprList.add(currLex);
+
             arithExpr1 = arithExpr1(index1 + 1, level + 1);
             if (arithExpr1.get(0) == 0) {
                 result.add(0);
@@ -571,7 +587,7 @@ public class TreeHandler {
     }
 
     public void Error(String message, int position) {
-        WriteFiles.writeFile("C:/Users/levas/Desktop/Мои усы лапы и хвост/Учеба/Автоматы/Task1/src/tree.txt", message + " в позиции " + position);
+        WriteFiles.writeFile("C:/Users/levas/Desktop/Мои усы лапы и хвост/Учеба/Автоматы/FL_Labs/src/tree.txt", message + " в позиции " + position);
         this.errorTriggered = true;
     }
 

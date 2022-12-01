@@ -1,31 +1,18 @@
-Expression{do loop while b , level=0, child=[Expression{specialexpr, level=1, child=[Expression{b = , level=2, child=[Expression{specialexpr, level=3, child=[Expression{\ , level=4, child=[Expression{do b = b \ c loop while b < 3 and b > 6 and b > 6 and c < 10 , level=5, child=null}, Expression{do b = b \ c loop while b < 3 and b > 6 and b > 6 and c < 10 , level=5, child=null}]}]}]}]}, Expression{do b = b \ c loop while b < 3 and b > 6 and b > 6 and c < 10 , level=4, child=null}]}
-Expression{specialexpr, level=1, child=[Expression{b = , level=2, child=[Expression{specialexpr, level=3, child=[Expression{\ , level=4, child=[Expression{do b = b \ c loop while b < 3 and b > 6 and b > 6 and c < 10 , level=5, child=null}, Expression{do b = b \ c loop while b < 3 and b > 6 and b > 6 and c < 10 , level=5, child=null}]}]}]}]}
-Expression{do b = b \ c loop while b < 3 and b > 6 and b > 6 and c < 10 , level=4, child=null}
-Expression{specialexpr, level=1, child=[Expression{b = , level=2, child=[Expression{specialexpr, level=3, child=[Expression{\ , level=4, child=[Expression{do b = b \ c loop while b < 3 and b > 6 and b > 6 and c < 10 , level=5, child=null}, Expression{do b = b \ c loop while b < 3 and b > 6 and b > 6 and c < 10 , level=5, child=null}]}]}]}]}
-Expression{b = , level=2, child=[Expression{specialexpr, level=3, child=[Expression{\ , level=4, child=[Expression{do b = b \ c loop while b < 3 and b > 6 and b > 6 and c < 10 , level=5, child=null}, Expression{do b = b \ c loop while b < 3 and b > 6 and b > 6 and c < 10 , level=5, child=null}]}]}]}
-Expression{b = , level=2, child=[Expression{specialexpr, level=3, child=[Expression{\ , level=4, child=[Expression{do b = b \ c loop while b < 3 and b > 6 and b > 6 and c < 10 , level=5, child=null}, Expression{do b = b \ c loop while b < 3 and b > 6 and b > 6 and c < 10 , level=5, child=null}]}]}]}
-Expression{specialexpr, level=3, child=[Expression{\ , level=4, child=[Expression{do b = b \ c loop while b < 3 and b > 6 and b > 6 and c < 10 , level=5, child=null}, Expression{do b = b \ c loop while b < 3 and b > 6 and b > 6 and c < 10 , level=5, child=null}]}]}
-Expression{> , level=3, child=[Expression{do b = b \ c loop while b < 3 and b > 6 and b > 6 and c < 10 , level=4, child=null}, Expression{do b = b \ c loop while b < 3 and b > 6 and b > 6 and c < 10 , level=4, child=null}]}
-Expression{do b = b \ c loop while b < 3 and b > 6 and b > 6 and c < 10 , level=4, child=null}
-Expression{do b = b \ c loop while b < 3 and b > 6 and b > 6 and c < 10 , level=4, child=null}
-Expression{> , level=3, child=[Expression{do b = b \ c loop while b < 3 and b > 6 and b > 6 and c < 10 , level=4, child=null}, Expression{do b = b \ c loop while b < 3 and b > 6 and b > 6 and c < 10 , level=4, child=null}]}
-Expression{do b = b \ c loop while b < 3 and b > 6 and b > 6 and c < 10 , level=4, child=null}
-Expression{do b = b \ c loop while b < 3 and b > 6 and b > 6 and c < 10 , level=4, child=null}
-Expression{< , level=3, child=[Expression{do b = b \ c loop while b < 3 and b > 6 and b > 6 and c < 10 , level=4, child=null}, Expression{do b = b \ c loop while b < 3 and b > 6 and b > 6 and c < 10 , level=4, child=null}]}
-Expression{do b = b \ c loop while b < 3 and b > 6 and b > 6 and c < 10 , level=4, child=null}
-Expression{do b = b \ c loop while b < 3 and b > 6 and b > 6 and c < 10 , level=4, child=null}
-Expression{specialexpr, level=3, child=[Expression{\ , level=4, child=[Expression{do b = b \ c loop while b < 3 and b > 6 and b > 6 and c < 10 , level=5, child=null}, Expression{do b = b \ c loop while b < 3 and b > 6 and b > 6 and c < 10 , level=5, child=null}]}]}
-Expression{\ , level=4, child=[Expression{do b = b \ c loop while b < 3 and b > 6 and b > 6 and c < 10 , level=5, child=null}, Expression{do b = b \ c loop while b < 3 and b > 6 and b > 6 and c < 10 , level=5, child=null}]}
-Expression{do b = b \ c loop while b < 3 and b > 6 and b > 6 and c < 10 , level=4, child=null}
-Expression{do b = b \ c loop while b < 3 and b > 6 and b > 6 and c < 10 , level=4, child=null}
-Expression{do b = b \ c loop while b < 3 and b > 6 and b > 6 and c < 10 , level=4, child=null}
-Expression{do b = b \ c loop while b < 3 and b > 6 and b > 6 and c < 10 , level=4, child=null}
-Expression{do b = b \ c loop while b < 3 and b > 6 and b > 6 and c < 10 , level=4, child=null}
-Expression{do b = b \ c loop while b < 3 and b > 6 and b > 6 and c < 10 , level=4, child=null}
-Expression{do b = b \ c loop while b < 3 and b > 6 and b > 6 and c < 10 , level=4, child=null}
-Expression{do b = b \ c loop while b < 3 and b > 6 and b > 6 and c < 10 , level=4, child=null}
-Expression{\ , level=4, child=[Expression{do b = b \ c loop while b < 3 and b > 6 and b > 6 and c < 10 , level=5, child=null}, Expression{do b = b \ c loop while b < 3 and b > 6 and b > 6 and c < 10 , level=5, child=null}]}
-Expression{do b = b \ c loop while b < 3 and b > 6 and b > 6 and c < 10 , level=5, child=null}
-Expression{do b = b \ c loop while b < 3 and b > 6 and b > 6 and c < 10 , level=5, child=null}
-Expression{do b = b \ c loop while b < 3 and b > 6 and b > 6 and c < 10 , level=5, child=null}
-Expression{do b = b \ c loop while b < 3 and b > 6 and b > 6 and c < 10 , level=5, child=null}
+Expression{do loop until b , level=0, child=[Expression{specialexpr, level=1, child=[Expression{b = , level=2, child=[Expression{specialexpr, level=3, child=[Expression{* * , level=4, child=[Expression{do b = b * c * 2 loop until b > 12 , level=5, child=null}, Expression{do b = b * c * 2 loop until b > 12 , level=5, child=null}, Expression{do b = b * c * 2 loop until b > 12 , level=5, child=null}]}]}]}]}, Expression{do b = b * c * 2 loop until b > 12 , level=4, child=null}]}
+Expression{specialexpr, level=1, child=[Expression{b = , level=2, child=[Expression{specialexpr, level=3, child=[Expression{* * , level=4, child=[Expression{do b = b * c * 2 loop until b > 12 , level=5, child=null}, Expression{do b = b * c * 2 loop until b > 12 , level=5, child=null}, Expression{do b = b * c * 2 loop until b > 12 , level=5, child=null}]}]}]}]}
+Expression{do b = b * c * 2 loop until b > 12 , level=4, child=null}
+Expression{specialexpr, level=1, child=[Expression{b = , level=2, child=[Expression{specialexpr, level=3, child=[Expression{* * , level=4, child=[Expression{do b = b * c * 2 loop until b > 12 , level=5, child=null}, Expression{do b = b * c * 2 loop until b > 12 , level=5, child=null}, Expression{do b = b * c * 2 loop until b > 12 , level=5, child=null}]}]}]}]}
+Expression{b = , level=2, child=[Expression{specialexpr, level=3, child=[Expression{* * , level=4, child=[Expression{do b = b * c * 2 loop until b > 12 , level=5, child=null}, Expression{do b = b * c * 2 loop until b > 12 , level=5, child=null}, Expression{do b = b * c * 2 loop until b > 12 , level=5, child=null}]}]}]}
+Expression{b = , level=2, child=[Expression{specialexpr, level=3, child=[Expression{* * , level=4, child=[Expression{do b = b * c * 2 loop until b > 12 , level=5, child=null}, Expression{do b = b * c * 2 loop until b > 12 , level=5, child=null}, Expression{do b = b * c * 2 loop until b > 12 , level=5, child=null}]}]}]}
+Expression{specialexpr, level=3, child=[Expression{* * , level=4, child=[Expression{do b = b * c * 2 loop until b > 12 , level=5, child=null}, Expression{do b = b * c * 2 loop until b > 12 , level=5, child=null}, Expression{do b = b * c * 2 loop until b > 12 , level=5, child=null}]}]}
+Expression{specialexpr, level=3, child=[Expression{* * , level=4, child=[Expression{do b = b * c * 2 loop until b > 12 , level=5, child=null}, Expression{do b = b * c * 2 loop until b > 12 , level=5, child=null}, Expression{do b = b * c * 2 loop until b > 12 , level=5, child=null}]}]}
+Expression{* * , level=4, child=[Expression{do b = b * c * 2 loop until b > 12 , level=5, child=null}, Expression{do b = b * c * 2 loop until b > 12 , level=5, child=null}, Expression{do b = b * c * 2 loop until b > 12 , level=5, child=null}]}
+Expression{do b = b * c * 2 loop until b > 12 , level=4, child=null}
+Expression{do b = b * c * 2 loop until b > 12 , level=4, child=null}
+Expression{* * , level=4, child=[Expression{do b = b * c * 2 loop until b > 12 , level=5, child=null}, Expression{do b = b * c * 2 loop until b > 12 , level=5, child=null}, Expression{do b = b * c * 2 loop until b > 12 , level=5, child=null}]}
+Expression{do b = b * c * 2 loop until b > 12 , level=5, child=null}
+Expression{do b = b * c * 2 loop until b > 12 , level=5, child=null}
+Expression{do b = b * c * 2 loop until b > 12 , level=5, child=null}
+Expression{do b = b * c * 2 loop until b > 12 , level=5, child=null}
+Expression{do b = b * c * 2 loop until b > 12 , level=5, child=null}
+Expression{do b = b * c * 2 loop until b > 12 , level=5, child=null}

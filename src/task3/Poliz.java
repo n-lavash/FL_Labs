@@ -32,11 +32,13 @@ public class Poliz {
 
     public void print() {
         WriteFiles.writeFile2("C:/Users/levas/Desktop/Мои усы лапы и хвост/Учеба/Автоматы/FL_Labs/src/poliz.txt" ,this.allPolizEntries);
-
         List<Double> varValues = ReadFile.readFileForInterpreter("C:/Users/levas/Desktop/Мои усы лапы и хвост/Учеба/Автоматы/FL_Labs/src/varValues.txt");
         Interpreter interpreter = new Interpreter(this, varValues);
         interpreter.interpreterWork();
-        WriteFiles.writeFile1("C:/Users/levas/Desktop/Мои усы лапы и хвост/Учеба/Автоматы/FL_Labs/src/interpreter.txt", interpreter.getVarCurrValues());
+//        WriteFiles.writeFile1("C:/Users/levas/Desktop/Мои усы лапы и хвост/Учеба/Автоматы/FL_Labs/src/interpreter.txt", interpreter.getVarCurrValues());
+//        System.out.println(interpreter.getResults());
+        WriteFiles.writeFile1("C:/Users/levas/Desktop/Мои усы лапы и хвост/Учеба/Автоматы/FL_Labs/src/interpreter.txt", interpreter.getResults());
+//        System.out.println(interpreter.getResults().toString());
     }
 
     public void setAllPolizEntries(List<PolizEntry> allPolizEntries) {

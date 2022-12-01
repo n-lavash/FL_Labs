@@ -71,13 +71,10 @@ public class WriteFiles {
         }
     }
 
-    public static void writeFile1(String path, HashMap<String, Double> toWrite) {
+    public static void writeFile1(String path, StringBuilder toWrite) {
         try(FileWriter writer = new FileWriter(path, false))
         {
-            for (String ind:
-                    toWrite.keySet()) {
-                writer.write(ind + " = " + toWrite.get(ind) + "\n");
-            }
+            writer.write(toWrite.toString());
         }
         catch(IOException ex){
 
@@ -89,6 +86,20 @@ public class WriteFiles {
         try(FileWriter writer = new FileWriter(path, false))
         {
             writer.write(allPolizEntries.toString());
+        }
+        catch(IOException ex){
+
+            System.out.println(ex.getMessage());
+        }
+    }
+
+    public static void writeFile1(String path, HashMap<String, Double> toWrite) {
+        try(FileWriter writer = new FileWriter(path, false))
+        {
+            for (String ind:
+                    toWrite.keySet()) {
+                writer.write(ind + " = " + toWrite.get(ind) + "\n");
+            }
         }
         catch(IOException ex){
 

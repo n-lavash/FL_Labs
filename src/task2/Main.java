@@ -4,7 +4,6 @@ import task1.enums.EnState;
 import task1.files.ReadFile;
 import task1.files.WriteFiles;
 import task1.lexemes.Lexeme;
-import task3.TreeHandler;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -150,7 +149,7 @@ public class Main {
                 currentLexeme += currentSymbol;
 
             try {
-                if (!currentLexeme.equals("do") && !currentLexeme.equals("loop") && !currentLexeme.equals("while")) {
+                if (!currentLexeme.equals("do") && !currentLexeme.equals("loop") && !currentLexeme.equals("until")) {
                     char nextSymbol = structureJoined.charAt(index+1);
                     if (nextSymbol == ' ')
                         add = true;
@@ -173,7 +172,7 @@ public class Main {
             WriteFiles.writeFile("C:/Users/levas/Desktop/Мои усы лапы и хвост/Учеба/Автоматы/FL_Labs/src/results.txt", "There is a mistake in the structure");
         else {
             WriteFiles.writeFile("C:/Users/levas/Desktop/Мои усы лапы и хвост/Учеба/Автоматы/FL_Labs/src/results.txt", results);
-            task3.TreeHandler treeHandler = new TreeHandler(results);
+            TreeHandler treeHandler = new TreeHandler(results);
             boolean result = treeHandler.workTheTree();
             if (result) {
                 List<Expression> expressionsList = treeHandler.getExpressionList().stream().
@@ -181,7 +180,6 @@ public class Main {
                         collect(Collectors.toList());
                 List<String> toWrite = new ArrayList<>();
                 int i = 0;
-                System.out.println(expressionsList);
                 while (i < expressionsList.size()) {
                     Expression expr = expressionsList.get(i);
                     if (expr != null) {

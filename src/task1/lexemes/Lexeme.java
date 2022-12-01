@@ -16,7 +16,7 @@ public class Lexeme {
 
     public Lexeme(String lexeme, int position) {
         List<String> allVariants = Arrays.asList(
-                "do", "loop", "while", "and", "or",
+                "do", "loop", "until", "and", "or",
                 "+", "-", "*", "\\",
                 "<", ">", "<>", "==", "="
         );
@@ -33,8 +33,8 @@ public class Lexeme {
             case "loop":
                 this.lexemeType = EnLexemeType.lLoop;
                 break;
-            case "while":
-                this.lexemeType = EnLexemeType.lWhile;
+            case "until":
+                this.lexemeType = EnLexemeType.lUntil;
                 break;
             case "and":
                 this.lexemeType = EnLexemeType.lAnd;

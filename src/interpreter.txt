@@ -1,2 +1,120 @@
-b = 4.0
-c = 3.0
+
+Position = 0
+lexeme: b
+stack: b 
+values: b = 2.0 
+
+Position = 1
+lexeme: b
+stack: b b 
+values: b = 2.0 
+
+Position = 2
+lexeme: c
+stack: b b c 
+values: b = 2.0 c = 3.0 
+
+Position = 3
+lexeme: MUL
+stack: b b c 
+values: b = 2.0 c = 3.0 
+
+Position = 4
+lexeme: 2
+stack: b b c 
+values: b = 2.0 c = 3.0 
+
+Position = 5
+lexeme: MUL
+stack: b b c 
+values: b = 2.0 c = 3.0 
+
+Position = 6
+lexeme: SET
+stack: 
+values: b = 12.0 c = 3.0 
+
+Position = 7
+lexeme: b
+stack: b 
+values: b = 12.0 c = 3.0 
+
+Position = 8
+lexeme: 12
+stack: b 
+values: b = 12.0 c = 3.0 
+
+Position = 9
+lexeme: CMPG
+stack: b 0 
+values: b = 12.0 c = 3.0 
+
+Position = 10
+lexeme: 0
+stack: b 0 
+values: b = 12.0 c = 3.0 
+
+Position = -1
+lexeme: JZ
+stack: 
+values: b = 12.0 c = 3.0 
+
+Position = 0
+lexeme: b
+stack: b 
+values: b = 12.0 c = 3.0 
+
+Position = 1
+lexeme: b
+stack: b b 
+values: b = 12.0 c = 3.0 
+
+Position = 2
+lexeme: c
+stack: b b c 
+values: b = 12.0 c = 3.0 
+
+Position = 3
+lexeme: MUL
+stack: b b c 
+values: b = 12.0 c = 3.0 
+
+Position = 4
+lexeme: 2
+stack: b b c 
+values: b = 12.0 c = 3.0 
+
+Position = 5
+lexeme: MUL
+stack: b b c 
+values: b = 12.0 c = 3.0 
+
+Position = 6
+lexeme: SET
+stack: 
+values: b = 72.0 c = 3.0 
+
+Position = 7
+lexeme: b
+stack: b 
+values: b = 72.0 c = 3.0 
+
+Position = 8
+lexeme: 12
+stack: b 
+values: b = 72.0 c = 3.0 
+
+Position = 9
+lexeme: CMPG
+stack: b 1 
+values: b = 72.0 c = 3.0 
+
+Position = 10
+lexeme: 0
+stack: b 1 
+values: b = 72.0 c = 3.0 
+
+Position = 11
+lexeme: JZ
+stack: 
+values: b = 72.0 c = 3.0 

@@ -114,12 +114,12 @@ public class TreeHandler {
             currLex = this.lexemeList.get(index);
         } catch (IndexOutOfBoundsException e) {
             if (!this.errorTriggered) {
-                Error("Ожидается while", prevLex.getPosition() + prevLex.getLexeme().length() + 1);
+                Error("Ожидается until", prevLex.getPosition() + prevLex.getLexeme().length() + 1);
             }
             return false;
         }
-        if(!currLex.getLexemeType().equals(EnLexemeType.lWhile) && !this.errorTriggered) {
-            Error("Ожидается while", currLex.getPosition());
+        if(!currLex.getLexemeType().equals(EnLexemeType.lUntil) && !this.errorTriggered) {
+            Error("Ожидается until", currLex.getPosition());
             return false;
         }
         exprList.add(currLex);
@@ -143,7 +143,7 @@ public class TreeHandler {
 
         pointer = this.polizHandler.getAllPolizEntries().size() - 1;
         int indexJmp = this.polizHandler.getAllPolizEntries().size();
-        this.polizHandler.addNew(pointer+1, EnEntryType.etCmdPtr, String.valueOf(indexJmp + 2));
+        this.polizHandler.addNew(pointer+1, EnEntryType.etCmdPtr, String.valueOf(0));
         this.polizHandler.addNew(pointer+2, EnEntryType.etCmd, "JZ");
 
         exprList.add(currLex);
